@@ -1,5 +1,5 @@
 
-  var dataText = ["Developer","Youtuber","Freelancer"];  
+  var dataText = ["Developer","Freelancer"];  
   function typeWriter(text, i, fnCallback) {    
     if (i < (text.length)) {
 
