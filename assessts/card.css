@@ -1,9 +1,11 @@
-    .opener{
+
+
+.opener{
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;    
   }
   .card-opener{  
     perspective: 150rem;
@@ -25,10 +27,7 @@
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
   }
   .card-opener>.card-front {  background-color: #1c1c1c; }
-  .card-opener>.card-back {
-    transform: rotateY(180deg);
-    background-color: #1c1c1c;
-  }
+  .card-opener>.card-back { transform: rotateY(180deg); background-color: #1c1c1c;  }
   .card-opener:hover .card-front {    transform: rotateY(-180deg);  }
   .card-opener:hover .card-back { transform: rotateY(0deg);}
   .card-front > div{
@@ -66,7 +65,22 @@
     filter: grayscale(0);
     transition: 1s linear all;
   }
+  .space{ margin-left: 20px;  }
 
-  .space{
-      margin-left: 20px;
+  .opener-mobile{
+    display: none;
+    justify-content: center;
+    color: white;
+    padding-bottom: 5em;
   }
+  .opener-mobile .card__cta{
+    padding:20px;
+    margin:0 10px;
+    border-radius: 5px;
+    background-color: #1c1c1c;
+  }
+  
+@media screen and (max-width:768px) {
+    .opener-mobile{   display: block;    }
+    .opener{  display: none;    }
+}

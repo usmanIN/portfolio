@@ -98,7 +98,6 @@ section#service .card .icons{
 }
 .menubar{
   position: fixed;
-  
   text-align: center;
   left: 0;
   right: 0;
@@ -107,7 +106,7 @@ section#service .card .icons{
   z-index: 1;
 }
 
-.menubar .bar a{
+.menubar .bar div#menu a{
   color: #222;
   text-decoration: none;
   font-size: 40px;
@@ -141,31 +140,39 @@ section#skill .icons span.subtitle{
 section#skill .section-subtitle{
   font-size: 16px;
 }
+section#contact{
+  width: 100%;
+}
 
 @media screen and (max-width:768px) {
-  .menubar{
-    left: 0;
-    right: 0;
-    padding: 10px 0;
-  }
-  .menubar a{
-    font-size: 18px;
-    padding: 10px;
-  }
+.menubar{  padding: 10px 0;  }
+.menubar .bar div#menu{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+.menubar .bar div#menu a{
+  color: #222;
+  text-decoration: none;
+  font-size: 28px;
+  padding: 10px;
+}
+
   section{
     height: 100%;
+    width: 100%;
   }
-  section#about h1{
-    
-    font-size: 32px;
-    padding-bottom: 10%;
-    
+  section#about h1{    
+    font-size: 62px;
+    padding-bottom: 10%; 
   }
-  section#about .flex{
-    font-size: 18px;
-    margin: 0 25%;
-  }
-  section#about .flex a::before{
-    border: none;
-  }
+  section#about .flex a::before{  border: none;  }
+  section#about .flex  {  margin: 0px 10%; }
+  section#about .flex .icons{ font-size: 30px;}
+  .icons{ font-size: 50px;  }
+  .card{ margin-bottom: 10px;}
+  section .section-title {  font-size: 30px;  }
+  
+  
+
 }
