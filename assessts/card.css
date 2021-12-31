@@ -74,7 +74,7 @@
     padding-bottom: 5em;
   }
   .opener-mobile .card__cta{
-    padding:20px;
+    padding:20px 10px;
     border-radius: 5px;
     background-color: #343a40;
   }
