@@ -32,7 +32,7 @@
   .card-opener:hover .card-back { transform: rotateY(0deg);}
   .card-front > div{
     height: 15rem;
-    background-color: #1c1c1c;
+    background-color: #a08181;
     display: flex;
     align-items: center;
     padding: 0 10%;
@@ -75,9 +75,8 @@
   }
   .opener-mobile .card__cta{
     padding:20px;
-    margin:0 10px;
     border-radius: 5px;
-    background-color: #1c1c1c;
+    background-color: #343a40;
   }
   
 @media screen and (max-width:768px) {
