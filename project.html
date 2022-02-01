@@ -12,48 +12,60 @@
 	<link rel="stylesheet" href="./assessts/card.css"/>
     <style>
         
-        h1{
-            padding-bottom: 1em;
-            text-align: left;
-            position: relative;
-        }
-        
-        h1::after, h1::before{            
-            content: "";
-            border-bottom: 5px solid #ec1839;
-            left: 0;        
-            position: absolute;
-        }
-        h1::after{
-            width: 80%;
-            top: 50%;            
-        }
-        
-        h1::before{
-            width: 30%;
-            top: 55%;   
+        h1{ padding-bottom: 1em;    text-align: left;   position: relative; }
+        h1::after, h1::before{  content: "";    border-bottom: 5px solid #ec1839;   left: 0;    position: absolute; }
+        h1::after{  width: 80%; top: 50%;   }        
+        h1::before{ width: 30%; top: 55%;   }
+        #project .card{ text-align: center; }
+        #project .card .icons{  font-size: 2em; padding: 10px;  border-radius: 50%; background: #ec1839;    color: #fff;    }
+                
+        @media screen and (max-width:450px) {            
+            h1::after{  width: 80%; top: 60%;   }
+            h1::before{ width: 30%; top: 67%;   }
+            #project > .d-flex{ flex-direction: column; }
         }
 
-        #service .card{
-            text-align: center;        
+        .project-list { margin-bottom: 10px; }
+        .project-list .project-image img{   width: 100%;    height: 100%;  }
+        .project-list .project-image{ text-align: justify;    font-weight: 600; padding: 0 0px;}
+        .project-list .project-content{ 
+            text-align: justify;    
+            font-weight: 600;   
+            color: black; 
+            background: #fff;
+            padding: 20px 20px;
+        }
+        @media screen and (max-width:780px) {            
+            .project-list .project-content{order: 2;}
+        }
+        .carousel-image {   width: 100%;    height: 100%;  opacity: 0.8;}
+        .carousel-image:hover {opacity: 1.0;}
+
+        .carousel-image  .carousel-caption{
+            font-weight: 800;
+            font-size: 28px;
+            color: #ec1839;
         }
 
-        #service .card .icons{
-            font-size: 2em;
-            padding: 10px;
-            border-radius: 50%;
-            background: #ec1839;
-            color: #fff;
-        }
     </style>
 </head>
 <body id="top">	
-
+    <div class="menubar">
+		<div class="bar">
+			<div class="progress" id="bar"></div>
+			<div id="menu">
+				<a href="./index.html#top"><i class="fas fa-home"></i></a>
+				<a href="./index.html#service"><i class="fas fa-concierge-bell"></i></a>			
+				<a href="./index.html#skill"><i class="fas fa-mask"></i></a>
+				<a href="./index.html#project"><i class="fas fa-list"></i></a>
+				<a href="./index.html#contact"><i class="far fa-address-book"></i></a>		
+			</div>
+		</div>		
+	</div>
 	<div class="container">
-		<section id="about">
-            
-                <h1>Project</h1>								
-            <div id="service">
+		<section id="about">            
+            <h1>Project</h1>								
+            <!-- <div id="project">
                 <div class="d-flex justify-content-between mb-3">
                     <div class="card mr-2">
                         <div class="card-body">
@@ -77,14 +89,119 @@
                         </div>
                     </div>				
                 </div>
+            </div> -->
+
+            
+            <div class="row project-list">
+                <div class="col-lg-4 project-image">
+                    <img src="./image/react-front-blog.jpg" class="img-thumbnail">    
+                </div>
+                <div class="col-lg-8 project-content">
+                    <h3>React Front-end Blog</h3>
+                    <p>While developing this project, We work on multiple HTML tags, and various CSS properties. Most importantly you will get introduced with the functions required for DOM manipulation. Also how to add dynamic HTML using JS and Date function of JS.</p>
+                    <p>Link: <a href="https://react-blog-front.netlify.app/" target="_blank">react-blog-front.netlify.app/</a></p>
+                </div>
+            </div>        
+                 
+            <div class="row project-list">                
+                <div class="col-lg-8 project-content">
+                    <h3>Digital Clock</h3>
+                    <p>While developing this project, We work on multiple HTML tags, and various CSS properties. Most importantly you will get introduced with the functions required for DOM manipulation. Also how to add dynamic HTML using JS and Date function of JS.</p>
+                    <p>Link: <a href="https://usmanin.github.io/Elevation-Academy/project/Digital%20Clock/" target="_blank">digital-clock</a></p>
+                </div>
+                <div class="col-lg-4 project-image">
+                    <img src="./image/digital-clock.jpg" class="img-thumbnail">    
+                </div>
             </div>
-		</section>		
+
+            <div class="row project-list">
+                <div class="col-lg-4 project-image">
+                    <img src="./image/car-price-model.png" class="img-thumbnail">    
+                </div>
+                <div class="col-lg-8 project-content">
+                    <h3>Car Price Prediction</h3>
+                    <p>While developing this project, We work on multiple HTML tags, and various CSS properties. Most importantly you will get introduced with the functions required for DOM manipulation. Also how to add dynamic HTML using JS and Date function of JS.</p>
+                    <p>Link: <a href="https://usmanin.github.io/Elevation-Academy/project/Digital%20Clock/" target="_blank">digital-clock</a></p>
+                </div>
+            </div>
+
+            <div class="row project-list">                
+                <div class="col-lg-8 project-content">
+                    <h3>House Price Predication</h3>
+                    <p>While developing this project, We work on multiple HTML tags, and various CSS properties. Most importantly you will get introduced with the functions required for DOM manipulation. Also how to add dynamic HTML using JS and Date function of JS.</p>
+                    <p>Link: <a href="https://usmanin.github.io/Elevation-Academy/project/Digital%20Clock/" target="_blank">digital-clock</a></p>
+                </div>
+                <div class="col-lg-4 project-image">
+                    <img src="./image/house-price-model.png" class="img-thumbnail">    
+                </div>
+            </div>            
+            
+            <div class="container my-5">
+                <h2 class="text-white display-4 mb-3 text-uppercase text-left">Others</h2>
+
+                <div id="demo" class="carousel slide" data-ride="carousel">
+                    <ul class="carousel-indicators" id="carousel-indicators-content">
+             
+                    </ul>
+                    <div class="carousel-inner" id="carousel-inner-content">
+                        
+                        
+                    </div>
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                      <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                      <span class="carousel-control-next-icon"></span>
+                    </a>
+                  </div>
+            </div>
+            <br/><br/><br/><br/><br/>  
+      	</section>	        
+          
+
 	</div>
+    <div class="container">
+        
+    </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+                      
+    let dataset = [
+        {
+            image:"./image/Super-store.png",
+            title:"Super Store Dashboard", 
+            content:""
+        },
+        {
+            image:"./image/covid.png",
+            title:"Timeline Analysis : Covid-19", 
+            content:"A storyboard showing spread of Covid-19 cases in your country or any region"
+        },
+        {
+            image:"./image/brixton-web.png",
+            title:"", 
+            content:""
+        },
+        {
+            image:"./image/getsarkari-dashboard.png",
+            title:"Getsarkari.com", 
+            content:""
+        }        
+    ];
+
+    
+    for (let index = 0; index < dataset.length; index++) {
+        $("ul#carousel-indicators-content").append((index==0)?"<li data-target='#demo' data-slide-to='0' class='active'></li>":"<li data-target='#demo' data-slide-to='"+index+"'></li>");
+        $("div#carousel-inner-content").append((index==0)?"<div class='carousel-item active'><img src='"+dataset[index].image+"' class='img-thumbnail carousel-image' /><div class='carousel-caption'><h3>"+dataset[index].title+"</h3><p>"+dataset[index].content+"</p></div></div>":"<div class='carousel-item'><img src='"+dataset[index].image+"' class='img-thumbnail carousel-image' /><div class='carousel-caption'><h3>"+dataset[index].title+"</h3><p>"+dataset[index].content+"</p></div></div>");  
+        console.log($("div#carousel-inner-content").html());  //
+    }
+</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <script src="assessts/script.js"></script>
+
+
 </html>
