@@ -9,16 +9,6 @@
             image:"./image/covid.png",
             title:"Timeline Analysis : Covid-19", 
             content:"A storyboard showing spread of Covid-19 cases in your country or any region"
-        },
-        {
-            image:"./image/brixton-web.png",
-            title:"Consultancy Website: Freelancer", 
-            content:""
-        },
-        {
-            image:"./image/getsarkari-dashboard.png",
-            title:"Getsarkari.com", 
-            content:""
         }        
     ];
 
