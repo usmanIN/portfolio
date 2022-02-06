@@ -1,14 +1,11 @@
 *{
-  margin: 0;
-  padding: 0;
   scroll-behavior: smooth;
 }
-body{  background: #222222;  }
+body{  background: #1f2833;  }
 section{
-  height: 100vh;
   position: relative; 
-  padding: 1em 0;
-  padding-top: 8%;
+  padding: 10% 15%;
+  /* padding-top: 10%; */
   /* border-bottom: 2px solid coral; */
 }
 section .section-title{
@@ -83,24 +80,13 @@ section#service .card .icons{
   text-align: center;
   left: 0;
   right: 0;
-  bottom: 0;
-  background: #fff;
+  top: 0;
+  background: #4dd0e1;
   z-index: 1;
 }
 
-.menubar .bar div#menu a{
-  color: #222;
-  text-decoration: none;
-  font-size: 40px;
-  padding: 10px 20px;
-}
-
-.menubar .bar .progress{
-  position: absolute;
-  height: 100%;
-  border-radius: 0px;
-  z-index: -1;
-}
+.menubar .bar div#menu a{  color: #222;  text-decoration: none;  font-size: 40px;  padding: 10px 20px;}
+.menubar .bar .progress{  position: absolute;  height: 100%;  border-radius: 0px;  z-index: -1;}
 
 #project .card{  font-size: 14px; }
 #project .card-title{  font-size: 18px;  }
@@ -111,18 +97,9 @@ section#skill .section-subtitle{  font-size: 16px;  }
 section#contact{  width: 100%;  }
 
 @media screen and (max-width:768px) {
-.menubar{  padding: 5px 0;  }
-.menubar .bar div#menu{
-  display: flex;
-  justify-content: space-between;
-  margin: 0 10px;
-}
-.menubar .bar div#menu a{
-  color: #222;
-  text-decoration: none;
-  font-size: 28px;
-  padding:0 10px;
-}
+  .menubar{  padding: 5px 0;  }
+  .menubar .bar div#menu{  display: flex;  justify-content: space-between;  margin: 0 10px;}
+  .menubar .bar div#menu a{  color: #222;  text-decoration: none;  font-size: 28px;  padding:0 10px;}
 
   section{  height: 100%;  width: 100%; position: relative; clear: both;}
   section#about h1{  font-size: 62px;  padding-bottom: 10%;   }  

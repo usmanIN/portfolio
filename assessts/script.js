@@ -21,4 +21,21 @@ if(window.innerWidth >=768){
       document.getElementById("bar").style.width = scrolled + "%";
 
     });
+
+    
+    document.querySelectorAll("section").forEach(function(e){
+      e.style.height = window.innerHeight  + "px";
+      e.style.width = "100%";
+
+    });
+}
+
+
+
+
+let counting = document.querySelectorAll("section");
+for (let index = 0; index < counting.length; index++) {
+  if(index%2==1){
+    counting[index].style.backgroundColor = "#4dd0e1";
+  }
 }
