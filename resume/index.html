@@ -10,314 +10,66 @@
     	<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
         <style>
-            *{  font-size: 18px;}
-            body{width:99%;}
+            
             :root{
                 --color: #048BC2;
                 --background: #FFFFFF;
                 --button: #141A46;
             }
-
-            
-            .project-title, .card-title, .name-title,.role-title, .contact-title, .button-demo{    color: var(--color); }
-            .fas, .fab{    color: var(--color); }
-                    
-            .button-demo{    font-size: 16px;   }
-            .project-title, .card-title{    text-transform: uppercase;  margin-bottom: 10px;}
-            .card-title{    font-size: 24px;    font-weight: 700;   }
-            .project-title{    font-weight: 500;    }
-            
-
-            hr{ border-top: 10px solid var(--button);}
-
-            .card{  border: none; }
-            .card-body{ padding-bottom: 0; padding-top: 10px; padding-right: 0;}
-            .name-title{ font-size: 60px; font-weight: 700; }
-            .role-title{ font-size: 35px; font-weight: 400;}
-            
-            .tool-button .fas, .tool-button .fab{    color: #FFF; }    
-            .tool-button{   padding: 5px 10px;background: var(--button); color: white; margin: 5px;   font-size: 14px; }
-
-            div.project-card{ padding-left: 0px;}
-            
-            div.project-link a{ border: 1px solid var(--button); padding: 3px 10px; text-decoration: none; font-size: 16px;}
-            div.project-link a:first-child{background: var(--button); color: white;}
-            div.project-link a:first-child:hover{color: var(--button); background: white;}
-            div.project-link a:last-child{color: var(--button); background: white;}
-            div.project-link a:last-child:hover{background: var(--button); color: white;}
-            div.skill-card{ display: flex; flex-wrap: wrap; justify-content: flex-start;}          
-            
-            #color-div{ position: fixed; z-index: 1; bottom: 0;  width: 0; right: 0;  top:0;  background-color: #141A46; transition: 1s; overflow-x: hidden; padding-top: 60px;}
-            #color-div #color-container{ display: flex;  justify-content:center; flex-direction: column;}  
-            #color-div div#color-container div p{   margin: 5px; padding: 15px;  }
-            #color-div div#color-container div button{   margin: 5px;  border: none; font-size: 12px; color: #FFF;  font-weight:600; background: #191919;}
-            #color-div div#color-container div button:hover{  background: #FFF; color: #191919;}
-            
-            #button-open{   position: fixed;    bottom: 0;     right: 0;     z-index: 1; font-size: 12px; }
-            #button-close{   position: absolute;    bottom: 0;     right: 0;    }
-
-            @media print{
-                #color-div, #button-open{    display: none;}                
+            body{
+                padding:0 15%;
+                margin-top: 10%;
+                background: burlywood;
             }
-            
-        </style>
-        
+            .card{
+                padding: 50px;
+                width: 100%;
+                margin: 10px;                
+                height: 300px;
+                position: relative;                
+                background: linear-gradient(-45deg,var(--color),var(--button));
+                color: var(--background);
+            }
+            .fab, .fas{    font-size: 10em; }
+            p{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: 0px;      
+                margin: 0;          
+       
+            }
+        </style>        
     </head>
     <body>  
-        <button class="btn btn-primary btn-sm" id="button-open">Change Color</button>          
-        <div id="color-div">
+        <div class="d-flex justify-content-around text-center">
 
-            <div class="container" id="color-container">
-                
+            <div class="card">                
+                <div class="card-body">
+                    <h1 class="fab fa-react"></h1>
+                    <p><a href="react.html" class="btn btn-primary btn-sm btn-block">React</a></p>
+                </div>
             </div>
-            <button class="btn btn-primary btn-block btn-sm" id="button-close">Close</button>
             
-        </div>
-        <div class="container-fluid">
-            <div class="d-flex justify-content-between">
-                <div class="conatiner">
-                    <h1 class="name-title">Mohd Usman Gani</h1>                
-                    <h3 class="role-title">Frontend Developer</h3> 
+            <div class="card">                
+                <div class="card-body">
+                    <h1 class="fab fa-php"></h1>
+                    <!-- <h4 class="fas fa-plus"></h4>
+                    <h1 class="fab fa-laravel"></h1> -->
+                    <p><a href="php.html" class="btn btn-primary btn-sm btn-block">PHP</a></p>
                 </div>
-                <div class="conatiner d-flex flex-column float-right text-right">
-                    <h3 class="text-uppercase contact-title">Contact</h3>
-                    <div>+91-88868005903 <i class="fas fa-mobile-alt"></i></div>
-                    <div>mohdusmangani95@gmail.com <i class="fas fa-envelope-open"></i></div>
-                    <div>github.com/usmanIN <i class="fab fa-github"></i></div>
-                    <div>Moradabad,Uttar Pradesh <i class="fas fa-map-marker-alt"></i></div>
-                </div>
-            </div>    
-            <hr/>
-            
-        </div>
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <p class="card-title">Portfolio <span style="text-transform:capitalize">(Projects & Blogs)</span></p>
-                        <p ><a style="color:#191919; font-size: 18px; font-weight: 500;" href="https://usmanin.github.io/">https://usmanin.github.io <i class="fas fa-external-link-alt"></i></a></p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <p class="card-title">Projects</p>                        
-                        <div class="container-fluid mb-3 project-card">
-                            <p class="project-title">Blog Frontend App</p>
-                            <p class="project-description">This project includes React Router & Hooks
-                                mainly. I've created multiple components in
-                                React like Smart Components & Dummy &
-                                how to modify & do data operations within
-                                components using state variables.</p>
-                            <div class="project-link">
-                                <a href="" class="button-demo"> Live Demo <i class="fas fa-external-link-alt"></i></a>
-                                <a href="" class="button-demo"> Github Repo <i class="fab fa-github"></i> </a>
-                            </div>                            
-                        </div>
-
-                        
-                        <div class="container-fluid mb-3 project-card">
-                            <p class="project-title">Digital Clock with JS</p>
-                            <ul class="project-description">
-                                <li>This project has created using HTML, CSS &  JavaScript.</li>
-                                <li>I've used multiple DOM functions which
-                                    made the static application a dynamic one</li>
-                            </ul>
-                            <div class="project-link">
-                                <a href="https://usmanin.github.io/Elevation-Academy/project/Digital%20Clock/" class="button-demo"> Live Demo <i class="fas fa-external-link-alt"></i></a>
-                                <a href="https://github.com/usmanIN/Elevation-Academy/tree/master/project/Digital%20Clock" class="button-demo"> Github Repo <i class="fab fa-github"></i> </a>
-                            </div>                            
-                        </div>
-
-                        <div class="container-fluid mb-3 project-card">
-                            <p class="project-title">TODO App with JS</p>
-                            <ul class="project-description">
-                                <li>This project has created using HTML, CSS &  JavaScript.</li>
-                                <li>I've used multiple DOM functions which
-                                    made the static application a dynamic one</li>
-                            </ul>
-                            <div class="project-link">
-                                <a href="https://usmanin.github.io/Elevation-Academy/project/todo-app-js/" class="button-demo"> Live Demo <i class="fas fa-external-link-alt"></i></a>
-                                <a href="https://github.com/usmanIN/Elevation-Academy/tree/master/project/todo-app-js" class="button-demo"> Github Repo <i class="fab fa-github"></i> </a>
-                            </div>                            
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-body">
-                        <p class="card-title">Internships & Certifications</p>                        
-                        
-                            <div class="container-fluid mb-3 project-card">
-                                <ul>
-                                    <li>Prepbytes FullStack MERN Development Programme (Sept 2021)</li>
-                                    <li>The Spark Foundation (Data Science & Business Analytics Interns) Feb 2021</li>
-                                    <li>CSIR- North East Institute of Science and Technology, Jorhat (Feb-June 2020)</li>
-                                    <li>The Compiler Tech (Jan - March)</li>
-                                </ul>              
-                            </div>
-                    </div>
-                </div>
-                
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                            <div class="container-fluid">
-                                <p class="card-title">Tools & Technologies</p> 
-                                <div class="skill-card">
-                                    <div class="tool-button">
-                                        <i class="fab fa-react"></i> React
-                                    </div>
-                                    <div class="tool-button">
-                                        <i class="fab fa-css3-alt"></i> CSS
-                                    </div>                                    
-                                    <div class="tool-button">
-                                        <i class="fab fa-js"></i> Javascript
-                                    </div>
-                                    
-                                    <div class="tool-button">
-                                        <i class="fab fa-html5"></i> HTML
-                                    </div>
-                                    
-                                    <div class="tool-button">
-                                        <i class="fab fa-git-alt"></i> Git
-                                    </div>
-                                    
-                                    <div class="tool-button">
-                                        <i class="fab fa-bootstrap"></i> Bootstrap
-                                    </div>
-                                </div>
-                                <p></p>
-                                <div>Familier with: </div>
-                                <div class="d-flex flex-wrap justify-content-start">
-                                    <div class="tool-button">
-                                        <i class="fab fa-laravel"></i> Laravel
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-body">
-                        <div class="container-fluid mb-3">
-                            <p class="card-title">Experience</p>                                                     
-                            <p class="project-title">PHP Backend Developer</p>
-                            <p class="project-description">
-                                I understand the requirement of client, developing the RDBMS database and design the CRUD script for their admin panel along with Role-Based-Access-Controller and also insert their record in database.                                
-                            </p>                            
-                            <div class="project-link">
-                                <a href="https://demo.brixtonbike.com/" class="button-demo"> Live Demo (freelance) <i class="fas fa-external-link-alt"></i></a>                                
-                            </div>                            
-                        </div>
-                        <div class="container-fluid mb-3">
-                            <p class="project-title">PHP Full Stack Development </p>
-                            <p class="project-description">
-                                Build a project CRUD Website Project using PHP Functional programming, and build a Content Managment System into it.
-                            </p>                            
-                            <div class="project-link">
-                                <a href="https://getsarkari.com/" class="button-demo"> Live Demo (freelance) <i class="fas fa-external-link-alt"></i></a>                                
-                            </div>                            
-                        </div>
-
-                    </div>
-                </div>
-
-                
-                <div class="card">
-                    <div class="card-body">
-                        <div class="container-fluid">
-                            <p class="card-title">Education</p>                             
-                            <p style="margin-bottom: 0;">Master of Computer Applicaton</p>                            
-                            <p>Completed-2020</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-body">
-                        <div class="container-fluid">
-                            <p class="card-title">Skills</p> 
-                            <ul>
-                                <li>Team Work</li>
-                                <li>Innovative Thinking</li>
-                                <li>Analytical Skills</li>
-                                <li>Patience Communication</li>
-                                <li>Eager to learn new skills</li>
-                            </ul>                            
-                        </div>
-                    </div>
-                </div>
-
-
-                
-                <!-- <div class="card">
-                    <div class="card-body">
-                        <div class="container-fluid">
-                            <p class="card-title">Blogs</p>                             
-                            <a href="https://leideapad.wordpress.com/2021/02/25/build-a-ml-project-prediction-of-student-scores/" class="button-demo"> Build a ML Project – Prediction of Student Scores <i class="fas fa-external-link-alt"></i></a><br/>
-                            <a href="https://leideapad.wordpress.com/2020/04/23/how-to-create-a-pyramid-pattern-in-using-programming-language/" class="button-demo"> How to create a pyramid pattern in programming? <i class="fas fa-external-link-alt"></i></a>                     
-                        </div>                        
-                    </div>
-                </div>         -->
-
-            </div>            
-        </div>
-
-    </body>    
-    <script>
-
-
-
-
-
-    let color = [
-         ["#048BC2","#212834"],
-         ["#E47960","#000000"],
-         ["#65A3CB","#EBB248"],
-         ["#EC1D26","#2DC3E0"],       
-         ["#000000","#F61329"],         
-         ["#BD3147","#303E4C"],
-         ["#27B45E","#F7941D"],
-         ["#2C316F","#F16C59"]
-    ];
-
-    
-
-    for (let index = 0; index < color.length; index++) {
-        const value = color[index][1];
-        const button = color[index][0];
-        
-        document.querySelector("#color-container").innerHTML += `<div class="d-flex justify-content-start flex-wrap" style='padding:10px 20px'>
-            "<p style="background: `+value+`"></p>        
-            <p style="background: `+button+`"></p>
-            <button class="color-button" value="`+value+`" button="`+button+`">Select</button>
-            </div>`;
-    }
             
-        
-        let cbox = document.querySelectorAll("#color-div button.color-button");
-        console.log(cbox.length);
-        for (let i = 0; i < cbox.length; i++) {
-            cbox[i].addEventListener("click", function() {                
-                document.documentElement.style.setProperty('--button', this.getAttribute("button"));
-                document.documentElement.style.setProperty('--color', this.getAttribute("value"));
-            });
-        }
-        
-        document.querySelector("#button-open").addEventListener("click",function(){
-            document.querySelector("#color-div").style.width ="250px";
-        })
-        document.querySelector("#button-close").addEventListener("click",function(){
-            document.querySelector("#color-div").style.width = "0";
+            <div class="card">                
+                <div class="card-body">
+                    <h1 class="fas fa-chart-line"></h1>
+                    <p><a href="datascience.html"  class="btn btn-primary btn-sm btn-block">Data Science</a></p>
+                </div>
+            </div>
+            
        
-        });
-
-        document.querySelectorAll("a").forEach(function(e){
-            e.setAttribute("target","_blank");
-        });
-
-    </script>
+            
+        </div>
+    </body>
 </html>
